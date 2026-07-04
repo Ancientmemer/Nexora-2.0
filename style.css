@@ -82,7 +82,11 @@ ul{
 }
 
 .apply-btn:hover{
-    transform:translateY(-3px);
+
+    transform:translateY(-4px);
+
+    box-shadow:0 10px 25px rgba(212,175,55,.35);
+
 }
 
 
@@ -184,7 +188,9 @@ ul{
 
 .primary-btn:hover{
 
-    transform:translateY(-5px);
+    transform:translateY(-5px) scale(1.05);
+
+    box-shadow:0 15px 35px rgba(212,175,55,.35);
 
 }
 
@@ -204,9 +210,11 @@ ul{
 
 .secondary-btn:hover{
 
-    background:white;
+    background:#fff;
 
     color:#0B1F3A;
+
+    transform:translateY(-5px);
 
 }
 
