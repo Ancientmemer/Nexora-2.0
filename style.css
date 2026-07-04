@@ -701,3 +701,13 @@ padding:0 5%;
     color:#666;
     line-height:1.8;
 }
+
+@media(max-width:900px){
+
+.logo img{
+
+    height:55px;
+
+}
+
+}
