@@ -608,3 +608,25 @@ padding:0 5%;
     transition:.3s;
 
 }
+
+/* ==========================
+   SCROLL ANIMATION
+========================== */
+
+.fade{
+
+    opacity:0;
+
+    transform:translateY(50px);
+
+    transition:all .8s ease;
+
+}
+
+.fade.show{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
