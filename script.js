@@ -98,3 +98,9 @@ backToTop.addEventListener("click", () => {
     });
 
 });
+
+window.addEventListener("load", () => {
+
+    document.getElementById("preloader").style.display = "none";
+
+});
