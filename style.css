@@ -596,3 +596,15 @@ padding:0 5%;
     }
 
 }
+
+/* Navbar Scroll Effect */
+
+.navbar.scrolled{
+
+    background:#0B1F3A;
+
+    box-shadow:0 8px 25px rgba(0,0,0,.25);
+
+    transition:.3s;
+
+}
