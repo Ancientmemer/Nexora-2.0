@@ -1,0 +1,5 @@
+User-agent: *
+
+Allow: /
+
+Sitemap: https://nexoraglobalcareers.in/sitemap.xml
