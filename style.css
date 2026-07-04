@@ -48,10 +48,12 @@ ul{
     z-index:1000;
 }
 
-.logo h2{
-    color:#fff;
-    font-size:1.4rem;
-    font-weight:700;
+.logo img{
+
+    height:65px;
+    width:auto;
+    display:block;
+
 }
 
 .nav-links{
