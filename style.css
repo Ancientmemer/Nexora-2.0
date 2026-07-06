@@ -791,3 +791,49 @@ transform:rotate(360deg);
 }
 
 }
+
+/* ==========================
+   FLOATING INSTAGRAM
+========================== */
+
+.floating-instagram{
+
+    position:fixed;
+
+    bottom:170px;
+
+    right:25px;
+
+    width:60px;
+
+    height:60px;
+
+    background:linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888);
+
+    color:#fff;
+
+    border-radius:50%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:30px;
+
+    text-decoration:none;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.25);
+
+    transition:.3s;
+
+    z-index:999;
+
+}
+
+.floating-instagram:hover{
+
+    transform:translateY(-5px) scale(1.08);
+
+}
