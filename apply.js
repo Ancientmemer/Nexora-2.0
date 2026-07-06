@@ -13,6 +13,20 @@ form.addEventListener("submit", async (e) => {
     const education = document.getElementById("education").value.trim();
     const message = document.getElementById("message").value.trim();
 
+   const { data: existing } = await supabase
+    .from("applications")
+    .select("id")
+    .or(`email.eq.${email},phone_number.eq.${phone_number}`)
+    .limit(1);
+
+if (existing && existing.length > 0) {
+
+    alert("You have already submitted an application. Our recruitment team will contact you soon.");
+
+    return;
+
+}
+    
     const { error } = await supabase
         .from("applications")
         .insert([
