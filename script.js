@@ -25,9 +25,12 @@ questions.forEach((question) => {
 const menu = document.getElementById("menu-toggle");
 const nav = document.querySelector(".nav-links");
 
-menu.onclick = () => {
+menu.addEventListener("click", () => {
+
     nav.classList.toggle("active");
-};
+    menu.classList.toggle("active");
+
+});
 
 window.addEventListener("scroll", () => {
 
