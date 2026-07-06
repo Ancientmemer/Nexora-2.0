@@ -68,6 +68,19 @@ Rejected
 
 </td>
 
+<td>
+
+<button
+class="deleteBtn"
+data-id="${app.id}"
+>
+
+Delete
+
+</button>
+
+</td>
+
 </tr>
 
 `;
