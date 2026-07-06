@@ -134,3 +134,32 @@ await supabase
 .eq("id",id);
 
 });
+
+document.addEventListener("click", async (e) => {
+
+    if (!e.target.classList.contains("deleteBtn")) return;
+
+    const confirmDelete = confirm(
+        "Are you sure you want to delete this application?"
+    );
+
+    if (!confirmDelete) return;
+
+    const id = e.target.dataset.id;
+
+    const { error } = await supabase
+        .from("applications")
+        .delete()
+        .eq("id", id);
+
+    if (error) {
+
+        alert("Failed to delete application.");
+
+        return;
+
+    }
+
+    loadApplications();
+
+});
