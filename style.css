@@ -1155,3 +1155,28 @@ transition:.3s;
 background:#bb2d3b;
 
 }
+.viewBtn{
+
+background:#0B1F3A;
+
+color:#fff;
+
+border:none;
+
+padding:8px 15px;
+
+border-radius:8px;
+
+cursor:pointer;
+
+margin-right:8px;
+
+transition:.3s;
+
+}
+
+.viewBtn:hover{
+
+background:#1b3d73;
+
+}
