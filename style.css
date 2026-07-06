@@ -1038,3 +1038,96 @@ padding:30px 20px;
 }
 
 }
+/* ==========================
+   POPUP
+========================== */
+
+.popup{
+
+    position:fixed;
+
+    inset:0;
+
+    background:rgba(0,0,0,.55);
+
+    display:none;
+
+    justify-content:center;
+
+    align-items:center;
+
+    z-index:99999;
+
+}
+
+.popup-content{
+
+    background:#fff;
+
+    width:90%;
+
+    max-width:420px;
+
+    padding:35px;
+
+    border-radius:18px;
+
+    text-align:center;
+
+    animation:popup .25s ease;
+
+}
+
+.popup-content h2{
+
+    color:#0B1F3A;
+
+    margin-bottom:12px;
+
+}
+
+.popup-content p{
+
+    color:#666;
+
+    line-height:1.7;
+
+    margin-bottom:25px;
+
+}
+
+.popup-content button{
+
+    background:#D4AF37;
+
+    color:#0B1F3A;
+
+    border:none;
+
+    padding:14px 30px;
+
+    border-radius:10px;
+
+    cursor:pointer;
+
+    font-weight:600;
+
+}
+
+@keyframes popup{
+
+from{
+
+opacity:0;
+transform:scale(.8);
+
+}
+
+to{
+
+opacity:1;
+transform:scale(1);
+
+}
+
+}
