@@ -51,6 +51,24 @@ tbody.innerHTML+=`
 
 }
 
+document
+.getElementById("searchInput")
+.addEventListener("input",(e)=>{
+
+const value=e.target.value.toLowerCase();
+
+const rows=document.querySelectorAll("#applicationsTable tbody tr");
+
+rows.forEach(row=>{
+
+const text=row.innerText.toLowerCase();
+
+row.style.display=text.includes(value)?"":"none";
+
+});
+
+});
+
 loadApplications();
 
 document.getElementById("logoutBtn").onclick=()=>{
