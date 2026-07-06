@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Apply Online | Nexora Global Careers</title>
+
+<link rel="stylesheet" href="style.css">
+
+<script type="module" src="supabase.js"></script>
+<script type="module" src="apply.js"></script>
+</head>
+
+<body>
+
+<section class="apply-page">
+
+    <div class="apply-container">
+
+        <h1>Apply Online</h1>
+        <p>Complete the form below and our recruitment team will contact you.</p>
+
+        <form id="applicationForm">
+
+            <input
+                type="text"
+                id="fullName"
+                placeholder="Full Name"
+                required
+            >
+
+            <input
+                type="tel"
+                id="phone"
+                placeholder="Phone Number"
+                required
+            >
+
+            <input
+                type="tel"
+                id="whatsapp"
+                placeholder="WhatsApp Number"
+                required
+            >
+
+            <input
+                type="email"
+                id="email"
+                placeholder="Email Address"
+                required
+            >
+
+            <input
+                type="text"
+                id="education"
+                placeholder="Education"
+                required
+            >
+
+            <textarea
+                id="message"
+                maxlength="250"
+                placeholder="Additional Message (Optional)"
+            ></textarea>
+
+            <button type="submit">
+                Submit Application
+            </button>
+
+        </form>
+
+    </div>
+
+</section>
+
+</body>
+</html>
