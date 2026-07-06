@@ -71,6 +71,25 @@ Rejected
 <td>
 
 <button
+class="viewBtn"
+data-name="${app.full_name}"
+data-phone="${app.phone_number}"
+data-whatsapp="${app.whatsapp_number}"
+data-email="${app.email}"
+data-education="${app.education}"
+data-message="${app.message || 'No message'}"
+data-status="${app.status}"
+>
+
+View
+
+</button>
+
+</td>
+
+<td>
+
+<button
 class="deleteBtn"
 data-id="${app.id}"
 >
@@ -161,5 +180,31 @@ document.addEventListener("click", async (e) => {
     }
 
     loadApplications();
+
+});
+
+document.addEventListener("click",(e)=>{
+
+if(!e.target.classList.contains("viewBtn")) return;
+
+alert(
+
+`Name: ${e.target.dataset.name}
+
+Phone: ${e.target.dataset.phone}
+
+WhatsApp: ${e.target.dataset.whatsapp}
+
+Email: ${e.target.dataset.email}
+
+Education: ${e.target.dataset.education}
+
+Status: ${e.target.dataset.status}
+
+Message:
+
+${e.target.dataset.message}`
+
+);
 
 });
