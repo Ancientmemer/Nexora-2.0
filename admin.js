@@ -41,7 +41,32 @@ tbody.innerHTML+=`
 
 <td>${app.education}</td>
 
-<td>${app.status}</td>
+<td>
+
+<select
+class="statusSelect"
+data-id="${app.id}"
+>
+
+<option ${app.status==="Pending"?"selected":""}>
+Pending
+</option>
+
+<option ${app.status==="Contacted"?"selected":""}>
+Contacted
+</option>
+
+<option ${app.status==="Selected"?"selected":""}>
+Selected
+</option>
+
+<option ${app.status==="Rejected"?"selected":""}>
+Rejected
+</option>
+
+</select>
+
+</td>
 
 </tr>
 
@@ -78,3 +103,21 @@ localStorage.removeItem("adminLoggedIn");
 window.location.href="admin-login.html";
 
 };
+
+document.addEventListener("change",async(e)=>{
+
+if(!e.target.classList.contains("statusSelect")) return;
+
+const id=e.target.dataset.id;
+
+const status=e.target.value;
+
+await supabase
+
+.from("applications")
+
+.update({status})
+
+.eq("id",id);
+
+});
