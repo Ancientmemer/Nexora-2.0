@@ -1180,3 +1180,35 @@ transition:.3s;
 background:#1b3d73;
 
 }
+.btn-primary{
+display:inline-flex;
+align-items:center;
+justify-content:center;
+gap:10px;
+padding:16px 34px;
+background:linear-gradient(135deg,#FFD54A,#F4B400);
+color:#0B1F3A;
+font-size:17px;
+font-weight:700;
+text-decoration:none;
+border-radius:50px;
+box-shadow:0 10px 25px rgba(244,180,0,.35);
+transition:.35s ease;
+position:relative;
+overflow:hidden;
+}
+
+.btn-primary::after{
+content:"→";
+font-size:22px;
+transition:.35s;
+}
+
+.btn-primary:hover{
+transform:translateY(-3px);
+box-shadow:0 16px 35px rgba(244,180,0,.5);
+}
+
+.btn-primary:hover::after{
+transform:translateX(6px);
+}
