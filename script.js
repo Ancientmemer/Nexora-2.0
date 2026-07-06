@@ -28,7 +28,16 @@ const nav = document.querySelector(".nav-links");
 menu.addEventListener("click", () => {
 
     nav.classList.toggle("active");
-    menu.classList.toggle("active");
+
+    if(nav.classList.contains("active")){
+
+        menu.innerHTML = "&times;"; // ✕
+
+    }else{
+
+        menu.innerHTML = "☰";
+
+    }
 
 });
 
