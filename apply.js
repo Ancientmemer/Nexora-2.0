@@ -1,5 +1,21 @@
 import { supabase } from "./supabase.js";
 
+function showPopup(title,message){
+
+    document.getElementById("popupTitle").innerText = title;
+
+    document.getElementById("popupMessage").innerText = message;
+
+    document.getElementById("popup").style.display = "flex";
+
+}
+
+window.closePopup = function(){
+
+    document.getElementById("popup").style.display = "none";
+
+}
+
 const form = document.getElementById("applicationForm");
 
 form.addEventListener("submit", async (e) => {
@@ -21,7 +37,10 @@ form.addEventListener("submit", async (e) => {
 
 if (existing && existing.length > 0) {
 
-    alert("You have already submitted an application. Our recruitment team will contact you soon.");
+    showPopup(
+"Already Applied",
+"Our records show you've already submitted an application."
+);
 
     return;
 
@@ -43,7 +62,10 @@ if (existing && existing.length > 0) {
 
     if (error) {
 
-        alert("❌ Application submission failed.");
+        showPopup(
+"Submission Failed",
+"Something went wrong. Please try again."
+);
 
         console.error(error);
 
@@ -51,7 +73,10 @@ if (existing && existing.length > 0) {
 
     }
 
-    alert("✅ Application submitted successfully!");
+    showPopup(
+"Application Submitted",
+"Our recruitment team will contact you soon."
+);
 
     form.reset();
 
