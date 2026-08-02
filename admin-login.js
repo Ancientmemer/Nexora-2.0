@@ -8,7 +8,7 @@ const username=document.getElementById("username").value;
 
 const password=document.getElementById("password").value;
 
-if(username==="admin" && password==="Nexora@2026"){
+if(username==="admin" && password==="adhin"){
 
 localStorage.setItem("adminLoggedIn","true");
 
