@@ -45,6 +45,20 @@ async function loadApplications() {
 
     totalRows = count || 0;
 
+    document.getElementById("totalCount").innerText = totalRows;
+
+document.getElementById("pendingCount").innerText =
+data.filter(app => app.status === "Pending").length;
+
+document.getElementById("contactedCount").innerText =
+data.filter(app => app.status === "Contacted").length;
+
+document.getElementById("selectedCount").innerText =
+data.filter(app => app.status === "Selected").length;
+
+document.getElementById("rejectedCount").innerText =
+data.filter(app => app.status === "Rejected").length;
+
     tbody.innerHTML = "";
 
     if (!data || data.length === 0) {
